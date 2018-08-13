@@ -105,7 +105,7 @@ RUN buildDeps=' \
   && chown -R couchdb:couchdb \
     /usr/local/lib/couchdb /usr/local/etc/couchdb \
     /usr/local/var/lib/couchdb /usr/local/var/log/couchdb /usr/local/var/run/couchdb \
-  && chmod -R g+rw \
+  && chmod -R g=rX \
     /usr/local/lib/couchdb /usr/local/etc/couchdb \
     /usr/local/var/lib/couchdb /usr/local/var/log/couchdb /usr/local/var/run/couchdb \
   && mkdir -p /var/lib/couchdb \

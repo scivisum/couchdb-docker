@@ -21,14 +21,14 @@ if [ "$1" = 'couchdb' ]; then
 		/usr/local/var/run/couchdb \
 		/usr/local/etc/couchdb
 
-	chmod -R 0770 \
+	chmod -R 0700 \
 		/usr/local/var/lib/couchdb \
 		/usr/local/var/log/couchdb \
 		/usr/local/var/run/couchdb \
 		/usr/local/etc/couchdb
 
-	chmod 664 /usr/local/etc/couchdb/*.ini
-	chmod 775 /usr/local/etc/couchdb/*.d
+	chmod 644 /usr/local/etc/couchdb/*.ini
+	chmod 755 /usr/local/etc/couchdb/*.d
 
 	if [ "$COUCHDB_USER" ] && [ "$COUCHDB_PASSWORD" ]; then
 		# Create admin
